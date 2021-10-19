@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Items</title>
+
+  <style>
+    html,
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 3em;
+      padding: 5px;
+      margin: 20px 50px;
+      color: #111111;
+    }
+
+    ul {
+      list-style-type: none;
+      background: #5FF56C;
+      padding: 25px;
+      margin: 0;
+    }
+
+    ul li {
+      display: inline-block;
+      padding: 2.5px 25px;
+      font-size: 1.25em;
+    }
+
+    a {
+      text-decoration: none;
+      color: #227729;
+      cursor: pointer;
+    }
+
+    label {
+      font-size: 1.5em;
+      color: #333333;
+      padding: 20px;
+      margin: 50px;
+    }
+
+    input {
+      outline: none;
+      border: 3px solid #333333;
+      border-radius: 10px;
+      font-size: 20px;
+      padding: 5px;
+      color: #444444;
+      margin: 10px 0;
+    }
+
+    button {
+      background-color: #E6E6E6;
+      color: #404040;
+      border: 3px solid #333333;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 18px;
+      margin: 20px 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li><a href="http://localhost:5000/">Home</a></li>
+    <li><a href="http://localhost:5000/database/add">Add an item</a></li>
+    <li><a href="http://localhost:5000/database/viewall">View all</a></li>
+  </ul>
+
+  <h2>Add items to the database</h2>
+
+  <form action="/database/add" method="post">
+    <label for="name">Name</label><input type="text" name="name" required><br>
+    <label for="index">Index</label><input type="number" name="index" required><br>
+    <label for="rank">Rank</label><input type="number" name="rank" required><br>
+    <button type="submit">Add Item</button>
+  </form>
+</body>
+
+</html>
